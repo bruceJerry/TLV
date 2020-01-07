@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
-#include <unistd.h>
 
 #define MAX_LENGTH 100
 
@@ -23,10 +22,9 @@ int main(void)
             ptr = ptr + strlen(tempString) + 1;
             totleLength += strlen(tempString);
             number += 1;
-            sleep(1);
         }
     } while (tempString);
     averageWeight = (float)totleLength / (float)number;
-    printf("averageWeight = %.4f\n", averageWeight);
+    printf("averageWeight = %.2f\n", averageWeight);
     return 0;
 }
